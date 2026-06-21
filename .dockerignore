@@ -1,0 +1,61 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Dependências (vão ser instaladas no Docker)
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Variáveis de Ambiente
+.env
+.env.local
+.env.*.local
+
+# IDE e Editor
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testes
+coverage
+.nyc_output
+jest.config.js
+
+# CI/CD
+.github
+.gitlab-ci.yml
+.travis.yml
+
+# Documentação
+README.md
+docs
+
+# Arquivos Temporários
+tmp
+temp
+*.tmp
+*.bak
+
+# Docker
+Dockerfile
+docker-compose.yml
+docker-compose.override.yml
+.dockerignore
+
+# Banco de Dados
+mongo_data
+db_data
+
+# Logs
+logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
