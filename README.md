@@ -52,7 +52,26 @@ Frontend: `http://localhost:3001`
 2. Import → `postman_collection.json`
 3. Todos os endpoints prontos para testar
 
+## Configurando o Bearer Token no Postman
+
+Após realizar o login, copie o valor retornado no campo `token`.
+
+### Passo 1 - Abrir a Requisição
+
+Selecione qualquer endpoint protegido da API no Postman.
+
+### Passo 2 - Configurar a Autenticação
+
+1. Clique na aba **Authorization**.
+2. Em **Type**, selecione **Bearer Token**.
+3. Cole o token obtido no login no campo **Token**.
+
+### Exemplo
+
+```text
+Bearer eyJhbGciOiJIUzI1NiIs...
 ---
+```
 ## Aplicações e Documentação
 
 * **API REST:** http://localhost:3000
