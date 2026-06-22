@@ -30,7 +30,7 @@ npm start
 
 Frontend: `http://localhost:3001`
 
-**Login:** usuario: `trainer` | senha: `123456`
+**Login:** usuario: `Admin` | senha: `123456`
 
 ---
 
@@ -74,5 +74,4 @@ docker compose down
 ---
 
 ## Licença
-
-MIT
+Projeto desenvolvido para fins educacionais
