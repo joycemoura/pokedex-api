@@ -1,3 +1,4 @@
+//modelo de dados do pokemon
 const mongoose = require('mongoose');
 
 const pokemonSchema = new mongoose.Schema({

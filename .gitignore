@@ -44,5 +44,6 @@ Thumbs.db
 # Banco de Dados
 mongo_data/
 
-# Arquivo de lock (opcional)
+# Arquivo de lock 
 package-lock.json
+>>>>>>> 6abff30 (alterações)

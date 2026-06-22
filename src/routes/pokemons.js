@@ -1,7 +1,8 @@
+// contem as rotas de pokemons com proteção JWT 
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/pokemonsController');
-const { verificarToken } = require('../config/auth');
+const { verificarToken } = require('../config/auth'); //middleware que valida JWT token
 
 /**
  * @swagger

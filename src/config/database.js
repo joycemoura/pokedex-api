@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+//conectar ao banco de dados
+const mongoose = require('mongoose'); //biblioteca que conecta node ao mongodb
 
 const connectDB = async () => {
   try {

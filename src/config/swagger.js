@@ -1,3 +1,4 @@
+//documentação da API
 const swaggerJsdoc = require('swagger-jsdoc');
 
 const options = {
@@ -8,7 +9,7 @@ const options = {
       version: '1.0.0',
       description: 'API REST para gerenciar Pokémons com MongoDB e PokéAPI'
     },
-    servers: [
+    servers: [ 
       {
         url: 'http://localhost:3000',
         description: 'Servidor Local'

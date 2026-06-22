@@ -1,7 +1,8 @@
-const express = require('express');
-const router = express.Router();
-const { gerarToken } = require('../config/auth');
+const express = require('express'); //framework web
+const router = express.Router(); // objeto para definir as rotas
+const { gerarToken } = require('../config/auth');// função que cria JWT tokens
 
+// documentação swagger
 /**
  * @swagger
  * /api/auth/login:
@@ -28,7 +29,7 @@ const { gerarToken } = require('../config/auth');
 router.post('/login', (req, res) => {
   const { usuario, senha } = req.body;
 
-  // Validação simples (em produção, verificar no banco)
+  // Validação simples, verificar no banco)
   if (usuario === 'admin' && senha === '123456') {
     const token = gerarToken(usuario);
     return res.json({

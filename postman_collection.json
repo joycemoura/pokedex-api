@@ -1,0 +1,252 @@
+{
+  "info": {
+    "name": "Pokédex API",
+    "description": "API REST de Pokédex com MongoDB e PokéAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Pokémons",
+      "item": [
+        {
+          "name": "1. Listar Todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/pokemons",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "pokemons"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2. Importar Pokemon (POST)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"pikachu\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/pokemons",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "pokemons"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "3. Buscar Por ID (GET)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/pokemons/{{pokemon_id}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "pokemons", "{{pokemon_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "4. Atualizar Completo (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"pikachu\",\n  \"pokedexId\": 25,\n  \"tipos\": [\"electric\"],\n  \"altura\": 4,\n  \"peso\": 60,\n  \"favorito\": true,\n  \"notaUsuario\": 9\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/pokemons/{{pokemon_id}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "pokemons", "{{pokemon_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "5. Atualizar Parcial (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"notaUsuario\": 10,\n  \"tags\": [\"lendário\", \"favorito\"]\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/pokemons/{{pokemon_id}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "pokemons", "{{pokemon_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "6. Marcar Capturado (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"localizacao\": \"Viridian Forest\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/pokemons/{{pokemon_id}}/capturar",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "pokemons", "{{pokemon_id}}", "capturar"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "7. Marcar Favorito (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/pokemons/{{pokemon_id}}/favoritar",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "pokemons", "{{pokemon_id}}", "favoritar"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "8. Deletar (DELETE)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/pokemons/{{pokemon_id}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "pokemons", "{{pokemon_id}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Pokédex",
+      "item": [
+        {
+          "name": "9. Resumo/Estatísticas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/pokedex/resumo",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "pokedex", "resumo"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "10. Capturados",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/pokedex/capturados",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "pokedex", "capturados"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "11. Favoritos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/pokedex/favoritos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "pokedex", "favoritos"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "12. Histórico",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/pokedex/historico",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "pokedex", "historico"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "pokemon_id",
+      "value": "",
+      "type": "string"
+    }
+    
+  ]
+}

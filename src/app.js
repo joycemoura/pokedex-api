@@ -1,19 +1,20 @@
+// subir e organizar a API
 const express = require('express');
-const cors = require('cors');
+const cors = require('cors'); //permite que aplicações externas acessem a API
 const swaggerUi = require('swagger-ui-express');
-require('dotenv').config();
+require('dotenv').config(); // carrega variaveis do arq .env
 
-const connectDB = require('./config/database');
-const swaggerSpec = require('./config/swagger');
-const authRoutes = require('./routes/auth');
-const pokemonsRoutes = require('./routes/pokemons');
-const pokedexRoutes = require('./routes/pokedex');
+const connectDB = require('./config/database'); // config bd
+const swaggerSpec = require('./config/swagger'); //confg swagger
+const authRoutes = require('./routes/auth'); // rotas de autenticação
+const pokemonsRoutes = require('./routes/pokemons'); //rotas de pokemon
+const pokedexRoutes = require('./routes/pokedex'); //rotas de pokedex
 
 const app = express();
 
 // Middleware
 app.use(cors());
-app.use(express.json());
+app.use(express.json()); 
 
 // Swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));

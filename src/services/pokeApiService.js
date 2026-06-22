@@ -1,3 +1,4 @@
+// biblioteca axios utilizada para fazer requisições HTTP para a pokeAPI
 const axios = require('axios');
 
 const BASE_URL = process.env.POKEAPI_BASE_URL || 'https://pokeapi.co/api/v2';
@@ -24,7 +25,7 @@ const buscarPokemonNaAPI = async (nomeOuId) => {
   }
 };
 
-// Buscar lista de pokémons
+// Buscar lista de pokémons com paginação
 const listarPokemonsAPI = async (offset = 0, limit = 20) => {
   try {
     const response = await axios.get(
