@@ -53,6 +53,12 @@ Frontend: `http://localhost:3001`
 3. Todos os endpoints prontos para testar
 
 ---
+Aplicações e Documentação
+Serviço	Endereço
+API REST	http://localhost:3000
+Health Check	http://localhost:3000/health
+Documentação Swagger	http://localhost:3000/api-docs
+Frontend	http://localhost:4000 (após executar npm start)
 
 ## Parar Docker
 
